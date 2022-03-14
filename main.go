@@ -10,8 +10,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/incu6us/goimports-reviser/v2/helper"
-	"github.com/incu6us/goimports-reviser/v2/reviser"
+	"github.com/zhuxubin01/bbimports/helper"
+	"github.com/zhuxubin01/bbimports/reviser"
 )
 
 const (
@@ -56,7 +56,7 @@ func init() {
 		&projectName,
 		projectNameArg,
 		"",
-		"Your project name(ex.: github.com/incu6us/goimports-reviser). Optional parameter.",
+		"Your project name(ex.: github.com/incu6us/bbimports). Optional parameter.",
 	)
 
 	flag.StringVar(
@@ -76,7 +76,7 @@ func init() {
 	listFileName = flag.Bool(
 		listDiffFileNameArg,
 		false,
-		"Option will list files whose formatting differs from goimports-reviser. Optional parameter.",
+		"Option will list files whose formatting differs from bbimports. Optional parameter.",
 	)
 
 	setExitStatus = flag.Bool(

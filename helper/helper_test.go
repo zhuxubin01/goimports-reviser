@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/incu6us/goimports-reviser/v2/reviser"
+	"github.com/zhuxubin01/bbimports/reviser"
 )
 
 func TestDetermineProjectName(t *testing.T) {
@@ -31,7 +31,7 @@ func TestDetermineProjectName(t *testing.T) {
 					return dir
 				}(),
 			},
-			want:    "github.com/incu6us/goimports-reviser/v2",
+			want:    "github.com/zhuxubin01/bbimports",
 			wantErr: false,
 		},
 		{
@@ -42,7 +42,7 @@ func TestDetermineProjectName(t *testing.T) {
 					return reviser.StandardInput
 				}(),
 			},
-			want:    "github.com/incu6us/goimports-reviser/v2",
+			want:    "github.com/zhuxubin01/bbimports",
 			wantErr: false,
 		},
 	}

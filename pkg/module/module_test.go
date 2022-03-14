@@ -27,7 +27,7 @@ func TestGoModRootPathAndName(t *testing.T) {
 					return dir
 				}(),
 			},
-			want:    "github.com/incu6us/goimports-reviser/v2",
+			want:    "github.com/zhuxubin01/bbimports",
 			wantErr: false,
 		},
 		{
@@ -169,17 +169,17 @@ func TestDetermineProjectName(t *testing.T) {
 					return dir + "/module.go"
 				}(),
 			},
-			want:    "github.com/incu6us/goimports-reviser/v2",
+			want:    "github.com/zhuxubin01/bbimports",
 			wantErr: false,
 		},
 
 		{
 			name: "success with manual set",
 			args: args{
-				projectName: "github.com/incu6us/goimports-reviser/v2",
+				projectName: "github.com/zhuxubin01/bbimports",
 				filePath:    "",
 			},
-			want:    "github.com/incu6us/goimports-reviser/v2",
+			want:    "github.com/zhuxubin01/bbimports",
 			wantErr: false,
 		},
 	}

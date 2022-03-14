@@ -10,8 +10,8 @@ import (
 
 	"golang.org/x/tools/go/analysis"
 
-	"github.com/incu6us/goimports-reviser/v2/pkg/module"
-	"github.com/incu6us/goimports-reviser/v2/reviser"
+	"github.com/zhuxubin01/bbimports/pkg/module"
+	"github.com/zhuxubin01/bbimports/reviser"
 )
 
 const errMessage = "imports must be formatted"

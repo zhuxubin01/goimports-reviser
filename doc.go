@@ -2,13 +2,13 @@
 // It will help you to keep your code cleaner.
 //
 // Example:
-//	goimports-reviser -project-name github.com/incu6us/goimports-reviser -file-path ./reviser/reviser.go -rm-unused
+//	bbimports -project-name github.com/incu6us/bbimports -file-path ./reviser/reviser.go -rm-unused
 //
 // Input:
 // 	import (
 //		"log"
 //
-//		"github.com/incu6us/goimports-reviser/testdata/innderpkg"
+//		"github.com/incu6us/bbimports/testdata/innderpkg"
 //
 //		"bytes"
 //
@@ -23,13 +23,13 @@
 //
 //		"github.com/pkg/errors"
 //
-//		"github.com/incu6us/goimports-reviser/testdata/innderpkg"
+//		"github.com/incu6us/bbimports/testdata/innderpkg"
 //	 )
 //
 // If you need to set package names explicitly(in import declaration), you can use additional option `-set-alias`.
 //
 // More:
 //
-// 	goimports-reviser -h
+// 	bbimports -h
 //
 package main

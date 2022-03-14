@@ -1,7 +1,7 @@
 env:
   - GO111MODULE=on
   - CGO_ENABLED=0
-  - PROJECT_NAME=goimports-reviser
+  - PROJECT_NAME=bbimports
   - PROJECT_USER=incu6us
 
 before:
@@ -9,8 +9,8 @@ before:
     - go mod download
 
 builds:
-  - id: goimports-reviser-amd64
-    binary: goimports-reviser
+  - id: bbimports-amd64
+    binary: bbimports
     goos:
       - linux
     goarch:
@@ -18,8 +18,8 @@ builds:
     ldflags:
       - -s -w -X "main.Tag={{ .Tag }}" -X "main.Commit={{ .FullCommit }}" -X "main.SourceURL={{ .GitURL }}" -X "main.GoVersion={{ .Env.GO_VERSION }}"
 
-  - id: goimports-reviser-darwin-amd64
-    binary: goimports-reviser
+  - id: bbimports-darwin-amd64
+    binary: bbimports
     goos:
       - darwin
     goarch:
@@ -28,8 +28,8 @@ builds:
     ldflags:
       - -s -w -X "main.Tag={{ .Tag }}" -X "main.Commit={{ .FullCommit }}" -X "main.SourceURL={{ .GitURL }}" -X "main.GoVersion={{ .Env.GO_VERSION }}"
 
-  - id: goimports-reviser-windows-amd64
-    binary: goimports-reviser
+  - id: bbimports-windows-amd64
+    binary: bbimports
     goos:
       - windows
     goarch:
@@ -54,10 +54,10 @@ release:
   prerelease: auto
   github:
     owner: incu6us
-    name: goimports-reviser
+    name: bbimports
 
 brews:
-  - name: goimports-reviser
+  - name: bbimports
     tap:
       owner: incu6us
       name: homebrew-tap
@@ -66,7 +66,7 @@ brews:
       name: incu6us
       email: vyacheslavpryimak@gmail.com
     folder: Formula
-    homepage: "https://github.com/incu6us/goimports-reviser"
+    homepage: "https://github.com/incu6us/bbimports"
     description: "Right imports sorting & code formatting tool"
     test: |
       system "#{bin}/goimports-reviser -version"
@@ -74,7 +74,7 @@ brews:
       bin.install "goimports-reviser"
 
 snapcrafts:
-  - id: goimports-reviser
+  - id: bbimports
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     replacements:
       amd64: 64-bit

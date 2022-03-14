@@ -1,4 +1,4 @@
-module github.com/incu6us/goimports-reviser/v2
+module github.com/zhuxubin01/bbimports
 
 go 1.17
 

@@ -109,7 +109,7 @@ import (
 Before usage:
 
 ```go
-package testdata // goimports-reviser/testdata
+package testdata // bbimports/testdata
 
 import (
 	"fmt" //fmt package
@@ -121,7 +121,7 @@ import (
 
 After usage:
 ```go
-package testdata // goimports-reviser/testdata
+package testdata // bbimports/testdata
 
 import (
 	"fmt" // fmt package
